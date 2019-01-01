@@ -61,9 +61,9 @@ const Cart = ({
         })}
       </div>
       <div>
-        <div className="description">
+        <h4>
         Total: ${getTotal(items).toFixed(2)}
-        </div>
+        </h4>
         {items.length &&
           <button
             className="ui button primary"
