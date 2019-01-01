@@ -20,15 +20,15 @@ const pizzaInfo = gql`
   query {
     pizzaSizes {
       name
-      maxToppings
       basePrice
+      maxToppings
       toppings {
-        defaultSelected 
         topping {
           name
           price
         }
-      } 
+        defaultSelected 
+      }
     }
   }`
 
@@ -57,6 +57,6 @@ const Base = ({
   ) : <h1>Firing up the oven...</h1>
 }
 
-//Proptype validation 
+//Proptype validation
 
 export default graphql(pizzaInfo)(connect(mapStateToProps, null)(Base))
