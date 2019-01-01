@@ -7,7 +7,7 @@ import { getPrice } from './Base'
 const mapDispatchToProps = dispatch => {
   return {
     getPrice,
-    getTotalPrice: (items) => items.reduce((result, pizza) => result + getPrice(pizza), 0),
+    getTotal: (items) => items.reduce((result, pizza) => result + getPrice(pizza), 0),
     payDispatch: (cart) => {
       dispatch(pay(cart))
     },
@@ -22,7 +22,7 @@ const Cart = ({
   payDispatch,
   removeFromCartDispatch,
   getPrice,
-  getTotalPrice
+  getTotal
 }) => {
   if (cart.paid) {
     return (
@@ -61,12 +61,15 @@ const Cart = ({
         })}
       </div>
       <div>
+        <div className="description">
+        Total: ${getTotal(items).toFixed(2)}
+        </div>
         {items.length &&
           <button
             className="ui button primary"
             onClick={() => payDispatch(cart)}
           >
-            Checkout {getTotalPrice(items).toFixed(2)}$
+            Checkout
           </button>
         }
       </div>
