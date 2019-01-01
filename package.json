@@ -1,0 +1,35 @@
+{
+  "name": "waldospizza",
+  "homepage": "http://hermanmartinus.github.io/waldos-pizza",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "graphql": "^0.10.5",
+    "prop-types": "^15.5.10",
+    "react": "^15.6.1",
+    "react-apollo": "^1.4.8",
+    "react-dom": "^15.6.1",
+    "react-redux": "^5.0.5",
+    "react-scripts": "1.0.10"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "lint": "standard --fix",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.2.3",
+    "react-test-renderer": "^15.6.1",
+    "standard": "^10.0.2"
+  },
+  "standard": {
+    "ignore": [
+      "/src/registerServiceWorker.js"
+    ]
+  }
+}
