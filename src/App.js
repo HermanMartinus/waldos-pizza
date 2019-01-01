@@ -20,7 +20,7 @@ import Base from './components/Base';
 
 const client = new ApolloClient({
   networkInterface: createNetworkInterface({
-    uri: 'https://core-graphql.dev.waldo.photos/pizza'
+    uri: 'https://cors-anywhere.herokuapp.com/https://core-graphql.dev.waldo.photos/pizza'
   })
 })
 

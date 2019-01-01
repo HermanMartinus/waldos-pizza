@@ -27,7 +27,7 @@ const Cart = ({
   if (cart.paid) {
     return (
       <h1>
-        Your order has been places for some pizza yo!
+        Your order has been placed for some pizza yo!
       </h1>
     )
   }
