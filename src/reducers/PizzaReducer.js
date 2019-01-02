@@ -11,7 +11,7 @@ export default (state = null, action) => {
 
       return { ...pizza, toppings: pizza.toppings.map(current => {
           if (current.topping.name === topping.name) {
-            return Object.assign({ ...current }, { defaultSelected: !current.defaultSelected });
+            return { ...current , defaultSelected: !current.defaultSelected };
           }
           return current;
         })
